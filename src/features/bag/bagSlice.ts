@@ -35,15 +35,20 @@ const bagSlice = createSlice({
 			const itemId = action.payload;
 			state.bagItems = state.bagItems.filter(item => item.id !== itemId);
 		},
-		
-		// increase: (state, action) => {
-		// 	const cartItem = state.bagItems.find(item => item.id === action.payload);
-		// 	cartItem.amount += 1;
-		// },
-		// decrease: (state, action) => {
-		// 	const cartItem = state.bagItems.find(item => item.id === action.payload);
-		// 	cartItem.amount -= 1;
-		// },
+		increase: (state, action) => {
+			const cartItem = state.bagItems.find(item => item.id === action.payload);
+			if (cartItem) {
+				cartItem.amount += 1;
+				state.amount++;
+			}
+		},
+		decrease: (state, action) => {
+			const cartItem = state.bagItems.find(item => item.id === action.payload);
+			if (cartItem) {
+				cartItem.amount -= 1;
+				state.amount--;
+			}
+		}
 		// calculateTotals: (state) => {
 		// 	let amount = 0;
 		// 	let total = 0;
@@ -57,5 +62,5 @@ const bagSlice = createSlice({
 	}
 })
 
-export const { clearBag, addItem, removeItem } = bagSlice.actions;
+export const { clearBag, addItem, removeItem, increase, decrease } = bagSlice.actions;
 export default bagSlice.reducer;

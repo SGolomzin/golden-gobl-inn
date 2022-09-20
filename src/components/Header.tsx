@@ -2,7 +2,6 @@ import BagButton from "./BagButton";
 import { useSelector } from "react-redux";
 import { RootStore } from "../store";
 
-
 const Header = () => {
 	const { amount } = useSelector((store: RootStore) => store.bag);
 

@@ -134,6 +134,14 @@ input[type="submit"] {
   color: var(--color-gray-600);
 }
 
+.btn-with-icon,
+.btn-with-icon svg {
+  fill: currentColor;
+  width: 1em;
+  height: 1em;
+  padding: 0;
+}
+
 .btn-ghost:hover {
   background-color: var(--color-gray-300);
 }
@@ -212,8 +220,8 @@ input[type="submit"] {
 }
 
 .card-item-list__modal-info {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  justify-content: space-around;
   gap: 1rem;
   font-size: larger;
 }
@@ -222,4 +230,10 @@ input[type="submit"] {
   display: flex;
   justify-content: center;
   gap: 1rem;
+}
+
+.input-items-amount {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
