@@ -36,7 +36,7 @@ const storeItems = [
   },
   {
     "id": "d196d1ba-c68b-4b38-87e0-5316222882bc",
-    "name": "Templar Stuff",
+    "name": "Templar Staff",
     "price": 2000.00,
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita necessitatibus quibusdam iure reprehenderit velit error veritatis quidem consequatur repellendus dolor.",
     "thumbnail": ""
