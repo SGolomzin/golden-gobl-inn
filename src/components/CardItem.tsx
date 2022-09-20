@@ -2,6 +2,7 @@ import Button from './Button';
 import { SwordIcon } from '../icons';
 import { useDispatch } from 'react-redux';
 import { addItem } from '../features/bag/bagSlice';
+import { openModal } from '../features/market/marketSlice';
 
 export interface ICardItem {
 	id: string,
@@ -25,7 +26,10 @@ const CardItem = ({
 				<h4 className='card-item__price'>{price} g</h4>
 				<p className='card-item__name'>{name}</p>
 			</div>
-			<Button onClick={() => dispatch(addItem({ id, name, price, thumbnail, description }))} value="Add in the bag" />
+			<Button onClick={() => {
+				dispatch(addItem({ id, name, price, thumbnail, description }))
+				dispatch(openModal(id))
+			}}>Add in the bag</Button>
 		</div>
 	)
 }

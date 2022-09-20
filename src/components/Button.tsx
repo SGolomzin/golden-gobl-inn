@@ -1,16 +1,12 @@
-interface IButton {
-	value: string
-}
-
 const Button = ({
-	value,
+	children,
 	...props
-}: React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> & IButton) => {
+}: React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>) => {
 	return (
 		<button
 			className="btn"
 			{...props}
-		>{value}</button>
+		>{children}</button>
 	)
 }
 
