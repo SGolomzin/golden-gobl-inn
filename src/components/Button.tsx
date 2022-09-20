@@ -2,7 +2,7 @@ import cn from "classnames";
 
 interface IButton extends React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
 	size?: "sm" | "md" | "lg",
-	appearance?: "none" | "primary" | "ghost",
+	appearance?: "none" | "primary" | "ghost" | "danger",
 	icon?: boolean
 }
 
@@ -18,7 +18,8 @@ const Button = ({
 		<button
 			className={cn("btn", className, {
 				"btn-primary": appearance === "primary",
-				"btn-ghost": appearance === "ghost"
+				"btn-ghost": appearance === "ghost",
+				"btn-danger": appearance === "danger"
 			}, {
 				"btn-sm": size === "sm",
 				"btn-md": size === "md",

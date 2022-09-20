@@ -7,7 +7,7 @@ import { openModal } from '../features/market/marketSlice';
 export interface ICardItem {
 	id: string,
 	name: string,
-	price: string,
+	price: number,
 	thumbnail: string,
 	description: string
 }
@@ -23,7 +23,7 @@ const CardItem = ({
 				{/* <img src={thumbnail} alt={name} /> */}
 			</div>
 			<div className="card-item__info">
-				<h4 className='card-item__price'>{price} g</h4>
+				<h4 className='card-item__price'>{price.toFixed(2)} g</h4>
 				<p className='card-item__name'>{name}</p>
 			</div>
 			<Button appearance='primary' onClick={() => {

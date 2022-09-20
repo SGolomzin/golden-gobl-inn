@@ -48,19 +48,16 @@ const bagSlice = createSlice({
 				cartItem.amount -= 1;
 				state.amount--;
 			}
+		},
+		calculateTotals: (state) => {
+			let total = 0;
+			state.bagItems.forEach(item => {
+				total += item.amount * item.price;
+			});
+			state.total = total;
 		}
-		// calculateTotals: (state) => {
-		// 	let amount = 0;
-		// 	let total = 0;
-		// 	state.bagItems.forEach(item => {
-		// 		amount += item.amount;
-		// 		total += item.amount * item.price;
-		// 	});
-		// 	state.amount = amount;
-		// 	state.total = total;
-		// }
 	}
 })
 
-export const { clearBag, addItem, removeItem, increase, decrease } = bagSlice.actions;
+export const { clearBag, addItem, removeItem, increase, decrease, calculateTotals } = bagSlice.actions;
 export default bagSlice.reducer;
