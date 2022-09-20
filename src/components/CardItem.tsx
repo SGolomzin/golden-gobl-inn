@@ -26,7 +26,7 @@ const CardItem = ({
 				<h4 className='card-item__price'>{price} g</h4>
 				<p className='card-item__name'>{name}</p>
 			</div>
-			<Button onClick={() => {
+			<Button appearance='primary' onClick={() => {
 				dispatch(addItem({ id, name, price, thumbnail, description }))
 				dispatch(openModal(id))
 			}}>Add in the bag</Button>

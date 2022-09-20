@@ -101,12 +101,41 @@ input[type="submit"] {
 
 /* buttons */
 .btn {
-  background-color: var(--color-accent-yellow);
+  background-color: var(--color-gray-300);
   border: none;
-  height: 3rem;
-  font-size: 1.875rem;
-  padding: 0 0.5rem;
   cursor: pointer;
+}
+
+.btn-sm {
+  line-height: 1.3rem;
+  font-size: 1.3rem;
+  padding: 0.2rem 0.3rem;
+}
+
+.btn-md {
+  line-height: 1.875rem;
+  font-size: 1.875rem;
+  padding: 0.3rem 0.5rem;
+}
+
+.btn-lg {
+  line-height: 2rem;
+  font-size: 2rem;
+  padding: 0.4rem 0.8rem;
+}
+
+.btn-primary {
+  background-color: var(--color-accent-yellow);
+}
+
+.btn-ghost {
+  background-color: transparent;
+  border: 3px solid var(--color-gray-300);
+  color: var(--color-gray-600);
+}
+
+.btn-ghost:hover {
+  background-color: var(--color-gray-300);
 }
 
 .btn:hover {
@@ -126,7 +155,7 @@ input[type="submit"] {
   background-color: var(--color-gray-100);
   display: grid;
   align-items: center;
-  grid-template-rows: 1fr auto auto;
+  grid-template-rows: 60% auto auto;
   text-align: center;
   grid-column-gap: 1.5rem;
   padding: 1rem;
@@ -144,10 +173,7 @@ input[type="submit"] {
 
 .card-item__thumbnail svg {
   fill: var(--color-gray-900);
-  margin-top: 50%;
-  width: 50%;
-  height: 50%;
-  transform: translateY(-50%);
+  height: 100%;
 }
 
 .card-item__price {
