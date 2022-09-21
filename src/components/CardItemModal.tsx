@@ -37,7 +37,7 @@ const CardItemModal = () => {
 				<Button
 					appearance="primary"
 					onClick={() => {
-						navigate("bag")
+						navigate("/bag")
 						dispatch(closeModal())
 					}}
 				>Look in the bag</Button>

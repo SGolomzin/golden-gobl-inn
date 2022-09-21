@@ -2,10 +2,11 @@ import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
-import Market from './pages/Market';
-import Bag from './pages/Bag';
+import MarketPage from './pages/MarketPage';
+import BagPage from './pages/BagPage';
 
 import { Routes, Route } from "react-router-dom";
+import ItemPage from './pages/ItemPage';
 
 function App() {
   return (
@@ -14,8 +15,9 @@ function App() {
       <main className="app-main">
         <div className="container">
           <Routes>
-            <Route path="/" element={<Market />} />
-            <Route path="bag" element={<Bag />} />
+            <Route path="/" element={<MarketPage />} />
+            <Route path="bag" element={<BagPage />} />
+            <Route path="item/:itemId" element={<ItemPage />} />
           </Routes>
         </div>
       </main>

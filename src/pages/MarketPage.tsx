@@ -2,7 +2,7 @@ import CardItemList from "../components/CardItemsList";
 import { useSelector } from "react-redux";
 import { RootStore } from "../store";
 
-const Market = () => {
+const MarketPage = () => {
 	const { itemsList } = useSelector((store: RootStore) => store.market);
 
 	return (
@@ -10,4 +10,4 @@ const Market = () => {
 	)
 }
 
-export default Market;
+export default MarketPage;

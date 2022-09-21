@@ -50,6 +50,7 @@ input[type="submit"] {
 
 .container {
   width: 80%;
+  height: 100%;
   margin: 0 auto;
 }
 
@@ -62,6 +63,7 @@ input[type="submit"] {
 .app-header .container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .app-header-nav {
@@ -318,4 +320,44 @@ input[type="submit"] {
 
 .bag-item-list__item-price {
   justify-self: end;
+}
+
+/* item view */
+.item-view {
+  display: grid;
+  grid-template-areas:
+    "iv-thumbnail iv-info"
+    "iv-thumbnail iv-controls";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  height: 100%;
+  row-gap: 2em;
+  font-size: x-large;
+  background-color: var(--color-gray-100);
+}
+
+.item-view__thumbnail {
+  grid-area: iv-thumbnail;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-view__thumbnail svg {
+  width: 70%;
+}
+
+.item-view__info {
+  grid-area: iv-info;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.item-view__info-description {
+  color: var(--color-gray-600);
+}
+
+.item-view__controls {
+  grid-area: iv-controls;
 }

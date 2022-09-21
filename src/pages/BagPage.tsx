@@ -8,7 +8,7 @@ import BagCardItem from '../components/BagCardItem';
 import { clearBag, calculateTotals } from "../features/bag/bagSlice";
 
 
-const Bag = () => {
+const BagPage = () => {
 	const { bagItems, amount, total } = useSelector((store: RootStore) => store.bag);
 	const dispatch = useDispatch();
 
@@ -49,4 +49,4 @@ const Bag = () => {
 	)
 }
 
-export default Bag;
+export default BagPage;

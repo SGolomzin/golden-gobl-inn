@@ -3,6 +3,7 @@ import { SwordIcon } from '../icons';
 import { useDispatch } from 'react-redux';
 import { addItem } from '../features/bag/bagSlice';
 import { openModal } from '../features/market/marketSlice';
+import { Link } from 'react-router-dom';
 
 export interface ICardItem {
 	id: string,
@@ -18,10 +19,10 @@ const CardItem = ({
 	const dispatch = useDispatch();
 	return (
 		<div className="card-item">
-			<div className="card-item__thumbnail">
+			<Link className="card-item__thumbnail" to={`/item/${id}`}>
 				<SwordIcon />
 				{/* <img src={thumbnail} alt={name} /> */}
-			</div>
+			</Link>
 			<div className="card-item__info">
 				<h4 className='card-item__price'>{price.toFixed(2)} g</h4>
 				<p className='card-item__name'>{name}</p>
