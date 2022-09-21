@@ -92,8 +92,16 @@ input[type="submit"] {
 }
 
 .app-footer {
+  display: flex;
+  align-items: center;
   background-color: var(--color-gray-300);
   color: var(--color-gray-600);
+}
+
+.app-footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .bag-page-link {
@@ -174,6 +182,14 @@ input[type="submit"] {
   background-color: var(--color-gray-300);
 }
 
+.btn-remove-item {
+  background-color: var(--color-condition-error);
+}
+
+.btn-remove-item svg {
+  color: var(--color-gray-100);
+}
+
 .btn:hover {
   opacity: 0.8;
 }
@@ -248,8 +264,9 @@ input[type="submit"] {
 }
 
 .card-item-list__modal-info {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
   gap: 1rem;
   font-size: larger;
 }
@@ -262,8 +279,14 @@ input[type="submit"] {
 
 .input-items-amount {
   display: flex;
+  justify-content: flex-end;
   align-items: center;
   gap: 0.5rem;
+}
+
+.input-items-amount p {
+  text-align: center;
+  flex: 0 0 3ch;
 }
 
 /* bag page */
@@ -287,7 +310,9 @@ input[type="submit"] {
 
 .bag-item-list__item {
   display: grid;
-  grid-template-columns: 10fr auto 1fr;
+  grid-template-columns: 1fr 80px 14ch 22px;
+  justify-content: space-between;
+  align-items: center;
   gap: 2rem;
 }
 

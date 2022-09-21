@@ -12,7 +12,7 @@ const InputItemsAmount = ({
 			<Button icon={true} onClick={() => decFn()} disabled={amount < 2}>
 				<ChevronDown />
 			</Button>
-			{amount}
+			<p>{amount}</p>
 			<Button icon={true} onClick={() => incFn()}>
 				<ChevronUp />
 			</Button>

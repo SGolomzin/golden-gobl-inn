@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { ICardItem } from '../../components/CardItem';
 
-interface IBagItem extends ICardItem {
+export interface IBagItem extends ICardItem {
 	amount: number
 }
 
@@ -33,6 +33,11 @@ const bagSlice = createSlice({
 		},
 		removeItem: (state, action) => {
 			const itemId = action.payload;
+			const item = state.bagItems.find(item => item.id === itemId);
+			if (item) {
+				const itemAmount = item.amount;
+				state.amount -= itemAmount;
+			}
 			state.bagItems = state.bagItems.filter(item => item.id !== itemId);
 		},
 		increase: (state, action) => {

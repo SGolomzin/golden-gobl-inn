@@ -2,7 +2,8 @@ const Footer = () => {
 	return (
 		<footer className="app-footer">
 			<div className="container">
-				<p>Footer</p>
+				<p>Learning React, Redux & TypeScript</p>
+				<p>sg - {new Date().getFullYear()}</p>
 			</div>
 		</footer>
 	)

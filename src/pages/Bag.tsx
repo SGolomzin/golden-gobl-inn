@@ -3,9 +3,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootStore } from "../store";
 
 import Button from "../components/Button";
-import InputItemsAmount from "../components/InputItemsAmount";
+import BagCardItem from '../components/BagCardItem';
 
-import { increase, decrease, clearBag, calculateTotals } from "../features/bag/bagSlice";
+import { clearBag, calculateTotals } from "../features/bag/bagSlice";
 
 
 const Bag = () => {
@@ -33,17 +33,7 @@ const Bag = () => {
 				<h2>your bag</h2>
 			</header>
 			<div className="bag-item-list">
-				{bagItems.map((item) => {
-					return <div key={item.id} className="bag-item-list__item">
-						<p>{item.name}</p>
-						<InputItemsAmount
-							amount={item.amount}
-							incFn={() => dispatch(increase(item.id))}
-							decFn={() => dispatch(decrease(item.id))}
-						/>
-						<p className="bag-item-list__item-price">{(item.amount * item.price).toFixed(2)}</p>
-					</div>
-				})}
+				{bagItems.map((item) => <BagCardItem key={item.id} item={item} />)}
 			</div>
 			<footer>
 				<hr />
